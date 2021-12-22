@@ -3,6 +3,24 @@ $slider-height: 250px;
 $point-size: 12px;
 
 // Colors
-$violet-300: #4c12a1;
-$violet-200: #4c12a1;
-$violet-100: #b5a4e6;
+$primary-300: #41108b;
+$primary-200: #4c12a1;
+$primary-100: #b5a4e6;
+
+// Eases
+$ease-default: all 0.195s ease-in-out;
+
+// Mixin
+@mixin flex-column-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-column-between{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}

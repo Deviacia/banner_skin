@@ -1,3 +1,6 @@
+mixin slide-item(path)
+  .slider-item: img(src=path).slider-item__img
+
 doctype
 html(lang='en')
     head
@@ -13,14 +16,8 @@ html(lang='en')
     body
         .wrapper
             .slider-container
-                .slider-track
-                    .slider-item: img(src="src/img/laptop_1.png").slider-item__img
-                    .slider-item: img(src="src/img/laptop_2.png").slider-item__img
-                    .slider-item: img(src="src/img/laptop_3.png").slider-item__img
-                    .slider-item: img(src="src/img/laptop_4.png").slider-item__img
-                
                 .slider-hero
-                    a(href=""): img(src="src/img/logo.svg").slider-hero__logo
+                    a(href=""): img(src="/img/header/logo.svg").slider-hero__logo
 
                     .slider-hero__text
                         p Lenovo IdeaPad 5i
@@ -28,10 +25,17 @@ html(lang='en')
                         p 256 GB SSD
 
                     a(href=""): button.headline.cta Shop now
+
+                .slider-track
+                    +slide-item('/img/header/laptop_1.png')
+                    +slide-item('/img/header/laptop_2.png')
+                    +slide-item('/img/header/laptop_3.png')
+                    +slide-item('/img/header/laptop_4.png')
                 
                 .slider-controller
-                    button.slider-controller__prev prev
+                    button.slider-controller__prev: img(src="/img/header/arrow-u.svg")
                     .slider-pointer
-                    button.slider-controller__next next
+                    button.slider-controller__next: img(src="/img/header/arrow-d.svg")
         
         script(src="src/script/slider.js")
+        script(src="src/script/anim.js")

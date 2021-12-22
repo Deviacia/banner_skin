@@ -10,13 +10,7 @@
   <body>
     <div class="wrapper">
       <div class="slider-container">
-        <div class="slider-track">
-          <div class="slider-item"><img class="slider-item__img" src="src/img/laptop_1.png"></div>
-          <div class="slider-item"><img class="slider-item__img" src="src/img/laptop_2.png"></div>
-          <div class="slider-item"><img class="slider-item__img" src="src/img/laptop_3.png"></div>
-          <div class="slider-item"><img class="slider-item__img" src="src/img/laptop_4.png"></div>
-        </div>
-        <div class="slider-hero"><a href=""><img class="slider-hero__logo" src="src/img/logo.svg"></a>
+        <div class="slider-hero"><a href=""><img class="slider-hero__logo" src="/img/header/logo.svg"></a>
           <div class="slider-hero__text">
             <p>Lenovo IdeaPad 5i</p>
             <p>Intel® Core™ i5 processor,</p>
@@ -24,13 +18,20 @@
           </div><a href="">
             <button class="headline cta">Shop now</button></a>
         </div>
+        <div class="slider-track">
+          <div class="slider-item"><img class="slider-item__img" src="/img/header/laptop_1.png"/></div>
+          <div class="slider-item"><img class="slider-item__img" src="/img/header/laptop_2.png"/></div>
+          <div class="slider-item"><img class="slider-item__img" src="/img/header/laptop_3.png"/></div>
+          <div class="slider-item"><img class="slider-item__img" src="/img/header/laptop_4.png"/></div>
+        </div>
         <div class="slider-controller">
-          <button class="slider-controller__prev">prev</button>
+          <button class="slider-controller__prev"><img src="/img/header/arrow-u.svg"></button>
           <div class="slider-pointer"></div>
-          <button class="slider-controller__next">next</button>
+          <button class="slider-controller__next"><img src="/img/header/arrow-d.svg"></button>
         </div>
       </div>
     </div>
     <script src="src/script/slider.js"></script>
+    <script src="src/script/anim.js"></script>
   </body>
 </html>

@@ -20,25 +20,25 @@ li, a{
 }
 
 button{
-    font-family: 'CurrysSans-Regular';
     border: none;
+    background: none;
     cursor: pointer;
-    padding: 7px;
+    
+    font-family: 'CurrysSans-Regular';
+    transition: $ease-default;
 
     &.cta{
         padding: 10px 50px;
     
         border-radius: 23px;
-        border: solid 2px $violet-200;
+        border: solid 2px $primary-200;
     
         background: #fff;
-        color: #4c12a1;
-    
-        transition: all 0.25s;
-    
+        color: $primary-200;
+
         &:hover{
             color: #fff;
-            background: $violet-200;
+            background: $primary-200;
         }
     }
 }
@@ -70,11 +70,9 @@ button{
 }
 
 .slider-item{
-    position: relative;
+    @include flex-column-center;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
 
     width: 100%;
     height: $slider-height;
@@ -93,14 +91,11 @@ button{
 // HERO
 
 .slider-hero{
+    @include flex-column-between;
+
     position: absolute;
     top: 0;
     left: 0;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 
     height: 100%;
     padding: 20px;
@@ -115,21 +110,18 @@ button{
         line-height: 120%;
         text-align: center;
     
-        color: $violet-200;
+        color: $primary-200;
     }
 }
 
 // POINTER
 
 .slider-controller{
+    @include flex-column-between;
+
     position: absolute;
     top: 0;
     right: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 
     height: 100%;
     padding: 20px;
@@ -137,29 +129,22 @@ button{
 }
 
 .slider-pointer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex-column-center;
 
     height: 100%;
 
     &__item{
         width: $point-size;
         height: $point-size;
-        background: $violet-100;
+        background: $primary-100;
         border-radius: 999px;
 
         margin: 5px;
     
-        transition: all 0.25s;
-    
-        &:hover{
-            background: $violet-200;
-        }
+        transition: $ease-default;
 
         &.active{
-            background: $violet-200;
+            background: $primary-200;
         }
     }
 }

@@ -90,4 +90,5 @@ if (itemsCount === 1) {
     btns.style.display = 'none'
 } else {
     createSlidesPoint()
+    checkBtns()
 }

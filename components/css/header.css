@@ -29,10 +29,11 @@ li, a {
 }
 
 button {
-  font-family: "CurrysSans-Regular";
   border: none;
+  background: none;
   cursor: pointer;
-  padding: 7px;
+  font-family: "CurrysSans-Regular";
+  transition: all 0.195s ease-in-out;
 }
 button.cta {
   padding: 10px 50px;
@@ -40,7 +41,6 @@ button.cta {
   border: solid 2px #4c12a1;
   background: #fff;
   color: #4c12a1;
-  transition: all 0.25s;
 }
 button.cta:hover {
   color: #fff;
@@ -69,10 +69,11 @@ button.cta:hover {
 }
 
 .slider-item {
-  position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 100%;
   height: 250px;
   padding: 20px;
@@ -86,13 +87,13 @@ button.cta:hover {
 }
 
 .slider-hero {
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
@@ -108,13 +109,13 @@ button.cta:hover {
 }
 
 .slider-controller {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   position: absolute;
   top: 0;
   right: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
@@ -123,8 +124,8 @@ button.cta:hover {
 .slider-pointer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100%;
 }
 .slider-pointer__item {
@@ -133,10 +134,7 @@ button.cta:hover {
   background: #b5a4e6;
   border-radius: 999px;
   margin: 5px;
-  transition: all 0.25s;
-}
-.slider-pointer__item:hover {
-  background: #4c12a1;
+  transition: all 0.195s ease-in-out;
 }
 .slider-pointer__item.active {
   background: #4c12a1;
