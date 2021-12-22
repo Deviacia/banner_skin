@@ -1,0 +1,37 @@
+doctype
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no")
+        
+        //- Links
+        link(rel="stylesheet", href="./css/header.css")
+
+        //- Scripts
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js") 
+    body
+        .wrapper
+            .slider-container
+                .slider-track
+                    .slider-item: img(src="src/img/laptop_1.png").slider-item__img
+                    .slider-item: img(src="src/img/laptop_2.png").slider-item__img
+                    .slider-item: img(src="src/img/laptop_3.png").slider-item__img
+                    .slider-item: img(src="src/img/laptop_4.png").slider-item__img
+                
+                .slider-hero
+                    a(href=""): img(src="src/img/logo.svg").slider-hero__logo
+
+                    .slider-hero__text
+                        p Lenovo IdeaPad 5i
+                        p Intel® Core™ i5 processor,
+                        p 256 GB SSD
+
+                    a(href=""): button.headline.cta Shop now
+                
+                .slider-controller
+                    button.slider-controller__prev prev
+                    .slider-pointer
+                    button.slider-controller__next next
+        
+        script(src="src/script/slider.js")

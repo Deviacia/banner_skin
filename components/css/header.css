@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "CurrysSans-Headline";
+  src: url(../../../fonts/CurrysSans-Headline.otf);
+}
+@font-face {
+  font-family: "CurrysSans-Regular";
+  src: url(../../../fonts/CurrysSans-Regular.otf);
+}
+@font-face {
+  font-family: "CurrysSans-Light";
+  src: url(../../../fonts/CurrysSans-Light.otf);
+}
+.headline {
+  font-family: "CurrysSans-Headline";
+}
+
+body {
+  font-family: "CurrysSans-Regular";
+}
+
+li, a {
+  list-style: none;
+  text-decoration: none;
+}
+
+button {
+  font-family: "CurrysSans-Regular";
+  border: none;
+  cursor: pointer;
+  padding: 7px;
+}
+button.cta {
+  padding: 10px 50px;
+  border-radius: 23px;
+  border: solid 2px #4c12a1;
+  background: #fff;
+  color: #4c12a1;
+  transition: all 0.25s;
+}
+button.cta:hover {
+  color: #fff;
+  background: #4c12a1;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.slider-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-image: url(../src/img/bg.png);
+  background-color: #cfc8f7;
+}
+
+.slider-track {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 250px;
+}
+
+.slider-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.slider-item__img {
+  height: inherit;
+}
+.slider-item__desc {
+  max-width: 200px;
+}
+
+.slider-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.slider-hero__logo {
+  height: 32px;
+}
+.slider-hero__text {
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  color: #4c12a1;
+}
+
+.slider-controller {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.slider-pointer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.slider-pointer__item {
+  width: 12px;
+  height: 12px;
+  background: #b5a4e6;
+  border-radius: 999px;
+  margin: 5px;
+  transition: all 0.25s;
+}
+.slider-pointer__item:hover {
+  background: #4c12a1;
+}
+.slider-pointer__item.active {
+  background: #4c12a1;
+}

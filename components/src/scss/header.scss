@@ -1,0 +1,165 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@import 'variables';
+@import 'fonts';
+
+.headline{
+    font-family: 'CurrysSans-Headline';
+}
+
+body{
+    font-family: 'CurrysSans-Regular';
+}
+
+li, a{
+    list-style: none;
+    text-decoration: none;
+}
+
+button{
+    font-family: 'CurrysSans-Regular';
+    border: none;
+    cursor: pointer;
+    padding: 7px;
+
+    &.cta{
+        padding: 10px 50px;
+    
+        border-radius: 23px;
+        border: solid 2px $violet-200;
+    
+        background: #fff;
+        color: #4c12a1;
+    
+        transition: all 0.25s;
+    
+        &:hover{
+            color: #fff;
+            background: $violet-200;
+        }
+    }
+}
+
+.wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+// CONTAINER
+
+.slider-container{
+    overflow: hidden;
+    position: relative;
+
+    width: 100%;
+    height: $slider-height;
+
+    background-image: url(../src/img/bg.png);
+    background-color: #cfc8f7;
+}
+
+.slider-track{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: $slider-height;
+}
+
+.slider-item{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: $slider-height;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    &__img{
+        height: inherit;
+    }
+    &__desc{
+        max-width: 200px;
+    }
+}
+
+// HERO
+
+.slider-hero{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+
+    &__logo{
+        height: 32px;
+    }
+
+    &__text{
+        font-size: 24px;
+        line-height: 120%;
+        text-align: center;
+    
+        color: $violet-200;
+    }
+}
+
+// POINTER
+
+.slider-controller{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.slider-pointer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+
+    &__item{
+        width: $point-size;
+        height: $point-size;
+        background: $violet-100;
+        border-radius: 999px;
+
+        margin: 5px;
+    
+        transition: all 0.25s;
+    
+        &:hover{
+            background: $violet-200;
+        }
+
+        &.active{
+            background: $violet-200;
+        }
+    }
+}
